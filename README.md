@@ -5,7 +5,10 @@ ZKClock Integration Scripts
 Tested on Python3
 
 # Required libs 
-pyzk, requests
+
+https://github.com/fananimi/pyzk
+
+requests
 
 pip install -U pyzk
 
