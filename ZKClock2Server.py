@@ -10,8 +10,9 @@ import sys
 import time
 import requests
 
-host = sys.argv[len(sys.argv)-2]
-url = sys.argv[len(sys.argv)-1]
+host = sys.argv[len(sys.argv)-3]
+url = sys.argv[len(sys.argv)-2]
+timeZoneOffSet = sys.argv[len(sys.argv)-1]
 
 print(host)
 print(url)
@@ -26,7 +27,7 @@ try:
 	conn.disable_device()
 	serial = conn.get_serialnumber();
 	timeOffset = time.mktime(conn.get_time().timetuple()) - time.mktime(timeToday.timetuple())
-	timeZoneOffset = -time.timezone
+#	timeZoneOffset = -time.timezone
 	users = conn.get_users()
 	records = conn.get_attendance()
 	conn.set_time(timeToday)
