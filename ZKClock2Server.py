@@ -24,7 +24,7 @@ try:
 	timeToday = datetime.today()
 	conn = zk.connect()
 	conn.disable_device()
-	serial = conn.get_serialnumber();
+	serial = conn.get_serialnumber()
 	timeOffset = time.mktime(conn.get_time().timetuple()) - time.mktime(timeToday.timetuple())
 	timeZoneOffset = -time.timezone
 	users = conn.get_users()
